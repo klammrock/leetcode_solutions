@@ -1,6 +1,5 @@
 package name.klamm.leetcode_top_150_88_merge.sorted.array;
 
-import java.util.Arrays;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
