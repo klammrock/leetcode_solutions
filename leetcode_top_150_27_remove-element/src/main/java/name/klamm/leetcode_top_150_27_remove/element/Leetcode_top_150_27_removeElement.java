@@ -7,14 +7,14 @@ class Solution {
         } else if (nums.length == 1) {
             return nums[0] == val ? 0 : 1;
         }
-        
+
         int searchIndex = nums.length - 1;
-        boolean wasRemove = false;
-        
+        boolean wasRemoved = false;
+
         for (int i = 0; i < nums.length && i < searchIndex; ++i) {
             if (nums[i] == val) {
-                wasRemove = true;
-                
+                wasRemoved = true;
+
                 for (; searchIndex > i; --searchIndex) {
                     if (nums[searchIndex] != val) {
                         int temp = nums[searchIndex];
@@ -26,7 +26,7 @@ class Solution {
             }
         }
         
-        return wasRemove ? searchIndex : (nums[searchIndex] == val ? nums.length - 1 : nums.length);
+        return wasRemoved ? searchIndex : (nums[searchIndex] == val ? nums.length - 1 : nums.length);
     }
 }
 
